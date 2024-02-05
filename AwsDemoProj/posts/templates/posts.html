@@ -1,0 +1,19 @@
+<!--{% extends 'base.html' %}-->
+{% block body %}
+    <span class="badge text-bg-info"><h1>Posts List</h1></span>
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Author</th>
+        <th>Action</th>
+    </tr>
+    {% for posts in posts_list %}
+    <tr>
+        <td>{{posts.post_title}}</td>
+        <td>{{posts.post_published_datetime}}</td>
+        <td>Posted by{{posts.post_author}}</td>
+    </tr>
+  {% endfor %}
+</table>
+{% endblock %}
